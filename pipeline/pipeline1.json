@@ -16,11 +16,14 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "ExcelSource",
+						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
 							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
 						}
 					},
 					"sink": {
@@ -44,7 +47,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "TaxiDataCSV",
+						"referenceName": "DelimitedText1",
 						"type": "DatasetReference"
 					}
 				],
